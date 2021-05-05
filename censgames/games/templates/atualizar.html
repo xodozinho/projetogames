@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atualização das informações</title>
+    <link rel = 'stylesheet' href=" {% static 'css/formulario.css' %} "/>
+</head>
+
+<body>
+<div>
+        <h1 id ="título">Atualização das informações</h1>
+        <p id ="subtitulo">Complete as informações abaixo</p>
+        <br>
+    </div>
+
+
+{% for at in dados_jogo %}
+
+    <form action="http://{{request.get_host}}/games/atualizar_informacoes" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="user_id" value="{{ at.id }}"/>
+
+        <div class="campo">
+            <label><strong>Nome do game</strong></label>
+            <input type="text" name="nome" value="{{ at.nome }}"/>
+        </div>
+
+        <div class="campo">
+            <label><strong>Gênero do game</strong></label>
+            <input type="text" name="genero" value="{{ at.genero }}"/>
+        </div>
+
+        <div class="campo">
+            <label><strong>Email</strong></label>
+            <input type="text" name="email" value="{{ at.email }}"/>
+        </div>
+
+        <div class="campo">
+            <label><strong>Plataforma</strong></label>
+            <input type="text" name="plataforma" value="{{ at.plataforma }}"/>
+
+        </div>
+
+        <div class="selecao">
+            <input type="submit" value="Enviar"/>
+        </div>
+
+    </form>
+{% endfor%}
+
+</body>
+</html>

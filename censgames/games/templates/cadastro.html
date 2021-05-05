@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel = 'stylesheet' href=" {% static 'css/formulario.css' %} "/>
+    <title>Cadastro</title>
+</head>
+<body>
+
+    <div>
+        <h1 id ="título">Cadastro de games</h1>
+        <p id ="subtitulo">Complete as informações abaixo</p>
+        <br>
+    </div>
+
+    <form action="cadastro" method="POST">
+        {% csrf_token %}
+
+        <div class="campo">
+            <label for="nome"><strong>Nome do game</strong></label>
+            <input type="text" name="nome" id="nome" required>
+        </div>
+
+        <div class="campo">
+            <label for="genero"><strong>Gênero do game</strong></label>
+            <input type="text" name="genero" id="genero" required>
+        </div>
+
+        <div class="campo">
+            <label for="email"><strong>Email</strong></label>
+            <input type="text" name="email" id="email" required>
+        </div>
+
+        <div class="campo">
+            <label><strong>Plataforma</strong></label>
+            <input type="text" name="plataforma" id="plataforma" required>
+
+        </div>
+
+        <div class="selecao">
+
+            <input type="submit" value="Enviar">
+
+
+        </div>
+
+    </form>
+    <br>
+    <br>
+    <br>
+    <p><a href="inicio">Clique aqui</a> para voltar para a página de principal.</p>
+    <p><a href="informacao">Clique aqui</a> para visualizar as informações dos games cadastrados.</p>
+
+</body>
+</html>
