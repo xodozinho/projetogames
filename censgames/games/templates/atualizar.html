@@ -32,19 +32,17 @@
         </div>
 
         <div class="campo">
+            <label><strong>Plataforma</strong></label>
+            <input type="text" name="plataforma" value="{{ at.plataforma }}"/>
+        </div>
+
+        <div class="campo">
             <label><strong>Email</strong></label>
             <input type="text" name="email" value="{{ at.email }}"/>
         </div>
 
-        <div class="campo">
-            <label><strong>Plataforma</strong></label>
-            <input type="text" name="plataforma" value="{{ at.plataforma }}"/>
+        <input type="submit" value="Enviar"/>
 
-        </div>
-
-        <div class="selecao">
-            <input type="submit" value="Enviar"/>
-        </div>
 
     </form>
 {% endfor%}

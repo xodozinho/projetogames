@@ -32,8 +32,13 @@ body{
     justify-content: center;
 }
 
-/* Elementos de tags <body>, <input>, <Select> e <button> */
-input, select, button {
+button a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Elementos de tags <body>, <input> */
+input{
     font-family: sans-serif;
     font-size: 1em;
     color: #59429d;
@@ -62,62 +67,65 @@ input, select, button {
     display: block;
 }
 
-/* Elementos de classe "campo" das tags <input> com atributo text e email, da tag <select>*/
-.campo input[type="text"], .campo input[type="email"], .campo select{
+/* Elementos de classe "campo" das tags <input> com atributo text e email*/
+.campo input[type="text"], .campo input[type="email"]
     padding: 0.2em;
     border: 1px solid #59429d;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     display: block;
 }
 
-/* Elementos de classe "campo" de tag <select> e <option>*/
+/* Elementos de classe "campo" para escrever as informacoes */
 .campo select option {
     padding-right: 1em;
 }
 
-/* Elemento de classe "campo" com tag <input>, <select> tocas com estado da pseudoclasse "focus"*/
-.campo input:focus, .campo select:focus{
+/* Elemento de classe "campo" com tag <input> tocas com estado da pseudoclasse "focus"*/
+.campo input:focus{
     background: #E0E0F8;
 }
-
-/* Elemento de classe "botao" */
-.botao:active {
-    font-size: 1.2em;
-    background: #59429d;
-    border: 0;
-    margin-bottom: 1em;
-    color: #ffffff;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
-
-/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
-.botao:hover {
-    background: #CCBBFF;
-    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: none;
-}
-
-/* Elementos de classe botão e de tag <select> */
-.botao, select{
-    cursor: pointer;
-}
-
 .info{
     padding-top: 40px;
-
 }
-.op a{
-    padding-right: 20px;
-
+.cadastrar{
+    padding-top: 50px
 }
+
 .op1{
     padding-top: 40px;
+}
 
+.botao_cadastro {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   color: #FFFFFF;
+   font-family: Brush Script MT;
+   font-size: 27px;
+   font-weight: 100;
+   padding: 1px;
+   background-color: #3D64F6;
+   -webkit-box-shadow: 1px 1px 20px 0 #FFFFFF;
+   -moz-box-shadow: 1px 1px 20px 0 #FFFFFF;
+   box-shadow: 1px 1px 20px 0 #FFFFFF;
+   text-shadow: 1px 1px 20px #000000;
+   border: solid #337FED 1px;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+}
+
+.botao_cadastro:hover {
+   border: solid #337FED 1px;
+   background: #1E62D0;
+   background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
+   background-image: -moz-linear-gradient(top, #1E62D0, #3D94F6);
+   background-image: -ms-linear-gradient(top, #1E62D0, #3D94F6);
+   background-image: -o-linear-gradient(top, #1E62D0, #3D94F6);
+   background-image: -webkit-gradient(to bottom, #1E62D0, #3D94F6);
+   -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   border-radius: 7px;
+   text-decoration: none;
 }

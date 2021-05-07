@@ -17,5 +17,4 @@ urlpatterns = [
     path('atualizar/<int:user_id>', views.atualizar, name='atualizar'),
     path('atualizar_informacoes', views.atualizar_informacoes, name='atualizar_informacoes')
 
-
 ]

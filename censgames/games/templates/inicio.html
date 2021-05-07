@@ -6,40 +6,49 @@
     <title>Censgames</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel = 'stylesheet' href=" {% static 'css/styles.css' %} "/>
+    <link rel='stylesheet' href=" {% static 'css/styles.css' %} "/>
 </head>
 <body>
-    <header>
-        <div class="top">
-            <h1>CensGames</h1>
+<main>
+    <div class="top">
+        <h1>CensGames</h1>
 
-        </div>
-        <div class="Imagem">
-            <img src="{% static 'imagem/jogos.jpg' %}"  />
-        </div>
-
-    <div class="texto">
-    <h3>Veja como os jogos podem fazer bem para você!</h3>
+    </div>
+    <div class="Imagem">
+        <img src="{% static 'imagem/jogos.jpg' %}"/>
     </div>
 
-        <div class="texto">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/USW-9hBfGWY"
+    <div class="texto">
+        <h4>Veja como os jogos podem fazer bem para você!</h4>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/USW-9hBfGWY"
                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
                 encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col">
+               <p class="texto_inicio">
+                   O site CSGames tem por objetivo saber o que as pessoas andam jogando durante a pandemia, por isso,
+                   gostariamos de saber sua opinião! Nos ajude a te ajudar, reponda a nossa pesquisa para indicarmos jogos q
+                   que melhor se adequam a o seu perfil.
+               </p>
+               <a href="form_cadastro" class="botao">Cadastrar</a>
 
-        <p> O site CSGames tem por objetivo saber o que as pessoas andam jogando durante a pandemia, por isso,
-            gostariamos de saber sua opinião! Nos ajude a te ajudar, reponda a nossa pesquisa para indicarmos jogos q
-            que melhor se adequam a o seu perfil<br><br><br><br>
-        <a href="form_cadastro">Clique aqui<a/> para ir para página de cadastro.</p>
-
+            </div>
+            <div class="col">
+                <a href="https://store.steampowered.com/?l=portuguese" target="_blank" class="botao1">Veja aqui as
+                   principais noticias sobre games!</a>
+            </div>
         </div>
-
-
-    </header>
-    <main>
-        <div class="main_left"></div>
-        <div class="main_right"></div>
-    </main>
+</main>
+<footer>
+    <div class="footer">
+      © Copyright 2021- All Rights Reserved - Legal
+    </div>
+</footer>
 
 </body>
 </html>

@@ -4,27 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Informações dos Games</title>
-    <link rel = 'stylesheet' href=" {% static 'css/formulario.css' %} "/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel='stylesheet' href=" {% static 'css/formulario.css' %} "/>
 </head>
 <body>
 
 <h1> Informações dos games</h1>
 
-  {% for jogo in games %}
-    <div class="info">
-    <h3> Nome: {{ jogo.nome }}</h3>
-    <h3> Gênero: {{ jogo.genero }}</h3>
-    <h3> Plataforma: {{ jogo.plataforma }}</h3>
+{% for jogo in games %}
+<div class="info">
+    <h5> Nome: {{ jogo.nome }}</h5>
+    <h5> Gênero: {{ jogo.genero }}</h5>
+    <h5> Plataforma: {{ jogo.plataforma }}</h5>
+</div>
+<div class="op">
+    <button type="button" class="btn btn-primary"><a href="visualizar/{{ jogo.id }}">Visualizar</a></button>
+    <button type="button" class="btn btn-danger"><a href="deletar/{{ jogo.id }}">Deletar</a></button>
+    <button type="button" class="btn btn-warning"><a href="atualizar/{{ jogo.id }}">Atualizar</a></button>
+</div>
+{% endfor %}
+<div class="container">
+    <div class="cadastrar row">
+        <button type="button" href="informacao" class="btn btn-dark">
+            <a href="form_cadastro" class="btn-dark">Cadastro</a>
+        </button>
     </div>
-    <div class="op">
-    <a href="visualizar/{{ jogo.id }}">Visualizar</a>
-    <a href="deletar/{{ jogo.id }}">Deletar</a>
-    <a href="atualizar/{{ jogo.id }}">Atualizar</a>
-    </div>
-  {% endfor %}
-    <div class="op1">
-    <p><a href="form_cadastro">Clique aqui</a> para voltar para a página de Cadastro.</p>
-    </div>
+</div>
+
 
 </body>
 </html>
